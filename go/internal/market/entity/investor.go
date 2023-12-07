@@ -1,9 +1,9 @@
 package entity
 
 type Investor struct {
-	ID string
-	Name string
-	AssetPosition []*InvestorAssetPosition
+	ID             string
+	Name           string
+	AssetPosition  []*InvestorAssetPosition
 }
 
 func NewInvestor(id string) *Investor {
@@ -38,7 +38,7 @@ func (i *Investor) UpdateAssetPosition(assetID string, qtdShares int) {
 
 type InvestorAssetPosition struct {
 	AssetID string
-	Shares int
+	Shares  int
 }
 
 func NewInvestorAssetPosition(assetID string, shares int) *InvestorAssetPosition {

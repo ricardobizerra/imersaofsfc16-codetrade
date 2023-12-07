@@ -6,11 +6,11 @@ import (
 )
 
 type Book struct {
-	Order []*Order
-	Transactions []*Transaction
-	OrdersChan chan *Order
-	OrdersChanOut chan *Order
-	Wg *sync.WaitGroup
+	Order          []*Order
+	Transactions   []*Transaction
+	OrdersChan     chan *Order
+	OrdersChanOut  chan *Order
+	Wg             *sync.WaitGroup
 }
 
 func NewBook(orderChan chan *Order, orderChanOut chan *Order, wg *sync.WaitGroup) *Book {
