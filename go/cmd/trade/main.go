@@ -37,6 +37,7 @@ func main() {
 	go func() {
 		for msg := range kafkaMsgChan {
 			wg.Add(1) // "wg" is a WaitGroup, used to wait for all goroutines to finish
+			fmt.Println(string(msg.Value))
 
 			tradeInput := dto.TradeInput{}
 			err := json.Unmarshal(msg.Value, &tradeInput)
